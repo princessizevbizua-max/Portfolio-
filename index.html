@@ -1,0 +1,2503 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Princess Izevbizua | Content Writer & Storyteller</title>
+    <meta name="description" content="Princess Izevbizua is a professional content writer, storyteller, and creative entrepreneur. Explore writing samples, brand storytelling, and emotional narratives." />
+    <meta name="keywords" content="content writer, storyteller, brand storytelling, blog writing, article writing, Princess Izevbizua, Glass Ink Haven, emotional writing" />
+    <meta name="author" content="Princess Izevbizua" />
+    <link rel="canonical" href="https://princess-izevbizua.netlify.app" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://princess-izevbizua.netlify.app" />
+    <meta property="og:title" content="Princess Izevbizua | Content Writer & Storyteller" />
+    <meta property="og:description" content="Professional content writer and storyteller crafting emotional narratives, brand stories, and engaging articles that connect with readers." />
+    <meta property="og:image" content="https://princess-izevbizua.netlify.app/og-image.jpg" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://princess-izevbizua.netlify.app" />
+    <meta property="twitter:title" content="Princess Izevbizua | Content Writer & Storyteller" />
+    <meta property="twitter:description" content="Professional content writer and storyteller crafting emotional narratives, brand stories, and engaging articles that connect with readers." />
+    <meta property="twitter:image" content="https://princess-izevbizua.netlify.app/og-image.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E&#9997;%3C/text%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+/*    /index.html   200
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router'
+import './index.css'
+import App from './App.tsx'
+
+createRoot(document.getElementById('root')!).render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+)
+import { Routes, Route, useLocation } from 'react-router'
+import { lazy, Suspense } from 'react'
+import Navigation from '@/components/Navigation'
+import PageTransition from '@/components/PageTransition'
+import Home from '@/pages/Home'
+
+const Portfolio = lazy(() => import('@/pages/Portfolio'))
+const PortfolioDetail = lazy(() => import('@/pages/PortfolioDetail'))
+const GlassInkHavenPage = lazy(() => import('@/pages/GlassInkHavenPage'))
+const NotFound = lazy(() => import('@/pages/NotFound'))
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  ;(window as any).scrollTo(0, 0)
+  return null
+}
+
+export default function App() {
+  return (
+    <>
+      <ScrollToTop />
+      <Navigation />
+      <PageTransition>
+        <Suspense
+          fallback={
+            <div
+              className="min-h-screen flex items-center justify-center"
+              style={{ backgroundColor: '#0A0E1A' }}
+            >
+              <div
+                className="w-8 h-8 border-2 border-t-transparent animate-spin"
+                style={{
+                  borderColor: '#C8963E',
+                  borderTopColor: 'transparent',
+                  borderRadius: '50%',
+                }}
+              />
+            </div>
+          }
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/portfolio/:id" element={<PortfolioDetail />} />
+            <Route path="/glass-ink-haven" element={<GlassInkHavenPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </PageTransition>
+    </>
+  )
+}
+              @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer components {
+  .label-uppercase {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  .pill-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    border: 1px solid currentColor;
+    border-radius: 20px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .pill-button:hover {
+    background: #C8963E;
+    border-color: #C8963E;
+    color: #FFFFFF;
+  }
+
+  .pill-button-filled {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    background: #C8963E;
+    border: 1px solid #C8963E;
+    border-radius: 20px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .pill-button-filled:hover {
+    background: #b08234;
+    border-color: #b08234;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+    export interface WritingSample {
+  id: string
+  title: string
+  category: string
+  description: string
+  image: string
+  overview: string
+  keyThemes: string[]
+  writingStyle: string
+  originalLink?: string
+}
+
+export const writingSamples: WritingSample[] = [
+  {
+    id: 'betrayal-truths',
+    title: '10 Hard Truths You Learn After Being Betrayed by Someone You Love',
+    category: 'Personal Development',
+    description: 'An emotional article exploring the lessons, growth, and self-discovery that often follow betrayal.',
+    image: '/work-1.jpg',
+    overview: 'An emotional and reflective article exploring betrayal, healing, self-worth, and personal growth. This piece delves into the difficult but transformative lessons that emerge when trust is broken, offering readers a compassionate roadmap toward healing and self-rediscovery.',
+    keyThemes: ['Healing', 'Emotional resilience', 'Self-discovery', 'Personal development', 'Trust rebuilding'],
+    writingStyle: 'Personal, emotional, engaging, and thought-provoking.',
+    originalLink: 'https://glassink.medium.com/10-hard-truths-you-learn-after-being-betrayed-by-someone-you-loved-f91e88aac5c3'
+  },
+  {
+    id: 'glass-ink-newsletter',
+    title: 'Glass Ink Newsletter',
+    category: 'Brand Storytelling',
+    description: 'A reflective newsletter series focused on healing, emotional growth, and authentic self-expression.',
+    image: '/work-2.jpg',
+    overview: 'A curated newsletter series that combines brand storytelling with emotional wellness. Each edition explores themes of healing, growth, and authentic living through the lens of the Glass Ink Haven brand, creating a meaningful connection between fashion, storytelling, and personal transformation.',
+    keyThemes: ['Brand storytelling', 'Emotional wellness', 'Community building', 'Authentic self-expression', 'Healing journey'],
+    writingStyle: 'Reflective, brand-aligned, nurturing, and community-focused.'
+  },
+  {
+    id: 'brand-connection',
+    title: 'Your Brand Doesn\'t Have a Content Problem, It Has a Connection Problem',
+    category: 'Brand Storytelling',
+    description: 'A deep dive into why brands struggle with engagement and how building genuine emotional connections is the real key to impactful content.',
+    image: '/work-3.jpg',
+    overview: 'This article explores the disconnect between what brands publish and what audiences actually need. It challenges the obsession with content volume and argues that the real issue is a lack of emotional connection. Through storytelling, empathy, and audience-first thinking, the piece shows how brands can move from simply creating content to building meaningful relationships with their communities.',
+    keyThemes: ['Brand storytelling', 'Emotional connection', 'Audience engagement', 'Content strategy', 'Authenticity'],
+    writingStyle: 'Insightful, persuasive, brand-focused, and thought-provoking.',
+    originalLink: 'https://glassink.medium.com/your-brand-doesnt-have-a-content-problem-it-has-a-connection-problem-e5bcb8807efd'
+  },
+  {
+    id: 'lifestyle-growth',
+    title: 'Lifestyle & Self-Growth Articles',
+    category: 'Blog Writing',
+    description: 'Articles focused on personal growth, mindset, emotional wellness, and everyday life experiences.',
+    image: '/work-1.jpg',
+    overview: 'A series of lifestyle and self-growth articles that blend practical advice with emotional intelligence. Topics range from mindset shifts and habit-building to emotional wellness and navigating everyday challenges with grace and self-compassion.',
+    keyThemes: ['Personal growth', 'Mindset', 'Emotional wellness', 'Lifestyle design', 'Self-compassion'],
+    writingStyle: 'Conversational, insightful, encouraging, and actionable.'
+  }
+]
+              export interface BrandValue {
+  title: string
+  description: string
+}
+
+export interface ProductCategory {
+  title: string
+  description: string
+}
+
+export const glassInkHavenData = {
+  overview: "Glass Ink Haven is a healing-focused clothing and lifestyle brand created to help women wear their stories with confidence. Through meaningful apparel, storytelling, and empowering messages, the brand creates a safe space for emotional expression, healing, growth, and self-discovery. The mission is simple: helping women feel seen, understood, and empowered through both fashion and storytelling.",
+  brandStory: "Glass Ink Haven was born from a simple yet powerful belief: that women deserve to feel seen in their healing. Founded by Princess Izevbizua, the brand emerged from her own journey of using writing as a tool for emotional processing and self-discovery. She realized that just as words on a page could heal, words on fabric could too. What started as personal journal entries evolved into a vision for a brand that would allow women to literally wear their healing journey.",
+  mission: "To help women heal, express themselves freely, and embrace their emotional journey through meaningful clothing and storytelling that reflects their inner world.",
+  vision: "To build a global community where women feel emotionally safe, represented, and empowered through fashion that speaks to their experiences, pain, growth, and strength.",
+  products: [
+    {
+      title: "Emotional Clothing",
+      description: "Clothing designed with meaningful, healing-centered messages that reflect emotional experiences such as growth, heartbreak, healing, resilience, and self-love."
+    },
+    {
+      title: "Storytelling-Based Branding",
+      description: "Each product is tied to emotional narratives that connect deeply with customers, creating a bond that goes beyond fabric."
+    },
+    {
+      title: "Community & Emotional Expression",
+      description: "A safe space for women to relate, heal, and feel understood through shared emotional experiences."
+    }
+  ] as ProductCategory[],
+  values: [
+    {
+      title: "Emotional Safety",
+      description: "Creating a judgment-free space where women can express their emotions freely and authentically."
+    },
+    {
+      title: "Authenticity",
+      description: "Encouraging women to show up as their true selves, embracing both their strength and their vulnerability."
+    },
+    {
+      title: "Healing & Growth",
+      description: "Supporting women at every stage of their emotional journey, from brokenness to wholeness."
+    },
+    {
+      title: "Community",
+      description: "Building connections among women who share similar experiences, creating a sisterhood of support."
+    },
+    {
+      title: "Empowerment",
+      description: "Inspiring women to reclaim their power and wear their stories with pride and confidence."
+    }
+  ] as BrandValue[],
+  futureGoals: [
+    "Expand the emotional clothing line to include sizes for all body types",
+    "Launch a digital healing journal companion app",
+    "Create community healing circles and workshops",
+    "Partner with mental health organizations to support emotional wellness initiatives",
+    "Develop a mentorship program for women navigating healing journeys",
+    "Open flagship retail spaces designed as healing sanctuaries"
+  ]
+}import { useEffect, useRef } from 'react'
+import * as THREE from 'three'
+
+const vertexShader = `
+varying vec2 vUv;
+void main() {
+  vUv = uv;
+  gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+}
+`
+
+const fragmentShader = `
+precision highp float;
+varying vec2 vUv;
+
+uniform float uTime;
+uniform vec3 uColor0;
+uniform vec3 uColor1;
+uniform vec3 uColor2;
+uniform vec3 uBgColor;
+uniform vec3 uLightDirection;
+uniform float uHoverState;
+uniform float uHoverX;
+uniform float uHoverY;
+uniform float uAspect;
+uniform vec3 uCamPos;
+uniform mat4 uCamToWorldMat;
+uniform mat4 uCamInvProjMat;
+uniform vec3 uRippleTrigger;
+
+float hash(vec2 p) {
+  return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
+}
+
+float noise(vec2 p) {
+  vec2 i = floor(p);
+  vec2 f = fract(p);
+  f = f * f * (3.0 - 2.0 * f);
+  float a = hash(i);
+  float b = hash(i + vec2(1.0, 0.0));
+  float c = hash(i + vec2(0.0, 1.0));
+  float d = hash(i + vec2(1.0, 1.0));
+  return mix(mix(a, b, f.x), mix(c, d, f.x), f.y);
+}
+
+float wave(vec2 pos, float t) {
+  return sin(pos.x * 2.0 + t) * cos(pos.y * 2.0 + t) * 0.3;
+}
+
+void main() {
+  float t = uTime * 0.4;
+
+  vec2 clipXY = vUv * 2.0 - 1.0;
+  clipXY.x *= uAspect;
+
+  vec4 clipPos = vec4(clipXY, 0.0, 1.0);
+  vec3 worldPos = (uCamToWorldMat * uCamInvProjMat * clipPos).xyz;
+  worldPos /= uCamInvProjMat[3][3];
+
+  vec3 rayDir = normalize(worldPos - uCamPos);
+  float dist = -uCamPos.y / rayDir.y;
+  vec3 pos = uCamPos + rayDir * dist;
+
+  float height = wave(pos.xz, t);
+  height += noise(pos.xz * 5.0 + t) * 0.4;
+  height += noise(pos.xz * 10.0 - t * 0.5) * 0.2;
+  height += noise(pos.xz * 20.0 + t * 0.2) * 0.1;
+  height += noise(pos.xz * 40.0) * 0.05;
+
+  if (uHoverState > 0.5) {
+    float dx = pos.x - uHoverX;
+    float dz = pos.z - uHoverY;
+    height += 0.8 * exp(-8.0 * (dx * dx + dz * dz));
+  }
+
+  float rippleDist = length(pos.xz - uRippleTrigger.xy);
+  float sinTrigger = sin(-(rippleDist * 4.0) + uTime * 8.0) * 0.4;
+  float rippleDecay = exp(-abs(rippleDist) * 4.0) * exp(-(uTime - uRippleTrigger.z) * 2.0);
+  height += sinTrigger * rippleDecay;
+
+  float waterLevel = pos.y + height;
+  float depth = max(-waterLevel, 0.0);
+
+  float fogFactor = 1.0 - exp(-depth * 0.8);
+
+  float eps = 0.01;
+  float hL = wave(pos.xz + vec2(-eps, 0.0), t) + noise((pos.xz + vec2(-eps, 0.0)) * 5.0 + t) * 0.4;
+  float hR = wave(pos.xz + vec2(eps, 0.0), t) + noise((pos.xz + vec2(eps, 0.0)) * 5.0 + t) * 0.4;
+  float hD = wave(pos.xz + vec2(0.0, -eps), t) + noise((pos.xz + vec2(0.0, -eps)) * 5.0 + t) * 0.4;
+  float hU = wave(pos.xz + vec2(0.0, eps), t) + noise((pos.xz + vec2(0.0, eps)) * 5.0 + t) * 0.4;
+  vec3 normal = normalize(vec3(hL - hR, 2.0 * eps, hD - hU));
+  normal = normalize(normal + vec3(0.0, 1.0, 0.0));
+
+  vec3 lightDir = normalize(uLightDirection);
+  float diffuse = max(dot(normal, lightDir), 0.0);
+  vec3 viewDir = vec3(0.0, 0.0, -1.0);
+  float specular = pow(max(dot(reflect(-lightDir, normal), viewDir), 0.0), 64.0);
+
+  float caustics = pow(max(sin(waterLevel * 30.0 + uTime) * 0.5 + 0.5, 0.0), 8.0) * 0.3;
+
+  vec3 deepColor = uColor0 + diffuse * 0.15;
+  vec3 surfaceColor = mix(uColor1, uColor2, specular);
+  vec3 waterColor = mix(deepColor, surfaceColor, smoothstep(0.0, 0.5, depth) + specular);
+  waterColor += caustics * uColor2;
+
+  vec3 col = mix(waterColor, uBgColor, fogFactor);
+  gl_FragColor = vec4(col, 1.0);
+}
+`
+
+export default function Ocean() {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const animFrameRef = useRef<number>(0)
+
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
+    const scene = new THREE.Scene()
+    const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1)
+    camera.position.set(0, 1, 1)
+    camera.updateMatrixWorld()
+    camera.updateProjectionMatrix()
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true })
+    renderer.setSize(window.innerWidth, window.innerHeight)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    container.appendChild(renderer.domElement)
+
+    const geometry = new THREE.PlaneGeometry(3, 3, 100, 100)
+    geometry.rotateX(-Math.PI / 2)
+
+    const uniforms = {
+      uTime: { value: 0.0 },
+      uColor0: { value: new THREE.Color(0.0, 0.063, 0.102) },
+      uColor1: { value: new THREE.Color(0.29, 0.42, 0.49) },
+      uColor2: { value: new THREE.Color(0.48, 0.62, 0.69) },
+      uBgColor: { value: new THREE.Color(0.0, 0.063, 0.102) },
+      uLightDirection: { value: new THREE.Vector3(-0.3, 0.8, 0.4) },
+      uHoverState: { value: 0.0 },
+      uHoverX: { value: 0.0 },
+      uHoverY: { value: 0.0 },
+      uAspect: { value: window.innerWidth / window.innerHeight },
+      uCamPos: { value: camera.position },
+      uCamToWorldMat: { value: camera.matrixWorld },
+      uCamInvProjMat: { value: camera.projectionMatrixInverse },
+      uRippleTrigger: { value: new THREE.Vector3(0, 0, -1000) },
+    }
+
+    const material = new THREE.ShaderMaterial({
+      vertexShader,
+      fragmentShader,
+      uniforms,
+    })
+
+    const mesh = new THREE.Mesh(geometry, material)
+    scene.add(mesh)
+
+    const raycaster = new THREE.Raycaster()
+    const mouse = new THREE.Vector2()
+
+    const onMouseMove = (event: MouseEvent) => {
+      mouse.x = (event.clientX / window.innerWidth) * 2 - 1
+      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1
+      raycaster.setFromCamera(mouse, camera)
+      const intersects = raycaster.intersectObject(mesh)
+      if (intersects.length > 0) {
+        material.uniforms.uHoverState.value = 1.0
+        material.uniforms.uHoverX.value = intersects[0].point.x
+        material.uniforms.uHoverY.value = intersects[0].point.z
+      } else {
+        material.uniforms.uHoverState.value = 0.0
+      }
+    }
+
+    const onClick = (event: MouseEvent) => {
+      mouse.x = (event.clientX / window.innerWidth) * 2 - 1
+      mouse.y = -(event.clientY / window.innerHeight) * 2 + 1
+      raycaster.setFromCamera(mouse, camera)
+      const intersects = raycaster.intersectObject(mesh)
+      if (intersects.length > 0) {
+        const point = intersects[0].point
+        material.uniforms.uRippleTrigger.value.set(
+          point.x,
+          point.z,
+          clock.getElapsedTime()
+        )
+      }
+    }
+
+    window.addEventListener('mousemove', onMouseMove)
+    window.addEventListener('click', onClick)
+
+    const clock = new THREE.Clock()
+
+    const onResize = () => {
+      const w = window.innerWidth
+      const h = window.innerHeight
+      renderer.setSize(w, h)
+      material.uniforms.uAspect.value = w / h
+    }
+    window.addEventListener('resize', onResize)
+
+    const animate = () => {
+      animFrameRef.current = requestAnimationFrame(animate)
+      material.uniforms.uTime.value = clock.getElapsedTime()
+      camera.updateMatrixWorld()
+      renderer.render(scene, camera)
+    }
+    animate()
+
+    return () => {
+      cancelAnimationFrame(animFrameRef.current)
+      window.removeEventListener('mousemove', onMouseMove)
+      window.removeEventListener('click', onClick)
+      window.removeEventListener('resize', onResize)
+      geometry.dispose()
+      material.dispose()
+      renderer.dispose()
+      if (container.contains(renderer.domElement)) {
+        container.removeChild(renderer.domElement)
+      }
+    }
+  }, [])
+
+  return (
+    <div
+      ref={containerRef}
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        zIndex: 0,
+      }}
+    />
+  )
+}
+      import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router'
+import { Menu, X } from 'lucide-react'
+
+export default function Navigation() {
+  const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
+  const location = useLocation()
+  const isHome = location.pathname === '/'
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 60)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const scrollToSection = (id: string) => {
+    setMobileOpen(false)
+    if (!isHome) {
+      window.location.href = `/#${id}`
+      return
+    }
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  const navLinks = [
+    { label: 'Work', id: 'work' },
+    { label: 'About', id: 'about' },
+    { label: 'Glass Ink Haven', id: 'glass-ink-haven' },
+    { label: 'Contact', id: 'contact' },
+  ]
+
+  return (
+    <>
+      <nav
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-400"
+        style={{
+          backgroundColor: scrolled ? '#0A0E1A' : 'transparent',
+          height: 64,
+        }}
+      >
+        <div className="flex items-center justify-between h-full px-6 lg:px-12 max-w-[1400px] mx-auto">
+          <Link
+            to="/"
+            className="font-[var(--font-heading)] text-lg tracking-tight"
+            style={{ color: '#F5F2EC' }}
+          >
+            Princess Izevbizua
+          </Link>
+
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className="label-uppercase transition-colors duration-300 hover:text-[#C8963E]"
+                style={{ color: '#F5F2EC' }}
+              >
+                {link.label}
+              </button>
+            ))}
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="pill-button"
+              style={{ color: '#F5F2EC', borderColor: '#F5F2EC' }}
+            >
+              Get in Touch
+            </button>
+          </div>
+
+          <button
+            className="md:hidden"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            style={{ color: '#F5F2EC' }}
+          >
+            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </nav>
+
+      {mobileOpen && (
+        <div
+          className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 md:hidden"
+          style={{ backgroundColor: '#0A0E1A' }}
+        >
+          {navLinks.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => scrollToSection(link.id)}
+              className="font-[var(--font-heading)] text-2xl"
+              style={{ color: '#F5F2EC' }}
+            >
+              {link.label}
+            </button>
+          ))}
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="pill-button mt-4"
+            style={{ color: '#C8963E', borderColor: '#C8963E' }}
+          >
+            Get in Touch
+          </button>
+        </div>
+      )}
+    </>
+  )
+}
+              import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router'
+
+export default function PageTransition({ children }: { children: React.ReactNode }) {
+  const location = useLocation()
+  const [displayChildren, setDisplayChildren] = useState(children)
+  const [transitioning, setTransitioning] = useState(false)
+
+  useEffect(() => {
+    setTransitioning(true)
+    const timer = setTimeout(() => {
+      setDisplayChildren(children)
+      window.scrollTo(0, 0)
+      const fadeTimer = setTimeout(() => {
+        setTransitioning(false)
+      }, 400)
+      return () => clearTimeout(fadeTimer)
+    }, 400)
+    return () => clearTimeout(timer)
+  }, [location.pathname])
+
+  return (
+    <>
+      {displayChildren}
+      <div
+        className="fixed inset-0 z-[100] pointer-events-none transition-opacity duration-400"
+        style={{
+          backgroundColor: '#0A0E1A',
+          opacity: transitioning ? 1 : 0,
+        }}
+      />
+    </>
+  )
+}import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const poemLines = [
+  'I write to understand',
+  'the space between',
+  'what is felt',
+  'and what is said.',
+  'Every story',
+  'begins with listening.',
+]
+
+export default function Hero() {
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const stickyRef = useRef<HTMLDivElement>(null)
+  const lineRefs = useRef<(HTMLDivElement | null)[]>([])
+  const subtitleRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (prefersReducedMotion) return
+
+    const ctx = gsap.context(() => {
+      lineRefs.current.forEach((line, i) => {
+        if (!line) return
+        gsap.fromTo(
+          line,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: 'power3.out',
+            delay: 0.3 + i * 0.15,
+            scrollTrigger: {
+              trigger: stickyRef.current,
+              start: 'top top',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        )
+      })
+
+      lineRefs.current.forEach((line, i) => {
+        if (!line) return
+        gsap.to(line, {
+          y: -60 * (i + 1) * 0.3,
+          opacity: 0.3,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: 'top top',
+            end: 'bottom top',
+            scrub: 1,
+          },
+        })
+      })
+
+      if (subtitleRef.current) {
+        gsap.fromTo(
+          subtitleRef.current,
+          { opacity: 0, y: 20 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            delay: 1.2,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: stickyRef.current,
+              start: 'top top',
+              toggleActions: 'play none none reverse',
+            },
+          }
+        )
+      }
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section
+      ref={sectionRef}
+      id="hero"
+      className="relative w-full"
+      style={{ height: '150vh', zIndex: 1 }}
+    >
+      <div
+        ref={stickyRef}
+        className="sticky top-0 w-full flex flex-col items-center justify-center"
+        style={{ height: '100vh' }}
+      >
+        <div className="flex flex-col items-center gap-3">
+          {poemLines.map((line, i) => (
+            <div
+              key={i}
+              ref={(el) => { lineRefs.current[i] = el }}
+              className="text-center select-none"
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: 'clamp(1.5rem, 2.5vw, 2.5rem)',
+                fontWeight: 300,
+                letterSpacing: '-0.02em',
+                color: '#F5F2EC',
+                textShadow: '0 2px 30px rgba(0,16,26,0.8), 0 0 60px rgba(0,16,26,0.5)',
+                lineHeight: 1.4,
+                opacity: 0,
+              }}
+            >
+              {line}
+            </div>
+          ))}
+        </div>
+
+        <div
+          ref={subtitleRef}
+          className="absolute bottom-12 left-8"
+          style={{ opacity: 0 }}
+        >
+          <p
+            className="label-uppercase"
+            style={{ color: 'rgba(245,242,236,0.7)', letterSpacing: '0.1em' }}
+          >
+            Princess Izevbizua &mdash; Content Writer &amp; Storyteller
+          </p>
+        </div>
+      </div>
+    </section>
+  )
+}
+    import { useEffect, useRef } from 'react'
+import { Link } from 'react-router'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { writingSamples } from '@/data/portfolio'
+import { ArrowRight } from 'lucide-react'
+
+gsap.registerPlugin(ScrollTrigger)
+
+export default function FeaturedWork() {
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      cardsRef.current.forEach((card, i) => {
+        if (!card) return
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 60 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 80%',
+            },
+            delay: i * 0.2,
+          }
+        )
+      })
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section
+      ref={sectionRef}
+      id="work"
+      className="relative w-full py-32 lg:py-40"
+      style={{ backgroundColor: '#F5F2EC', zIndex: 2 }}
+    >
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+        <div className="mb-20">
+          <p className="label-uppercase mb-4" style={{ color: '#C8963E' }}>
+            Portfolio
+          </p>
+          <h2
+            className="mb-4"
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              fontWeight: 300,
+              color: '#0A0E1A',
+            }}
+          >
+            Selected Work
+          </h2>
+          <p
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 16,
+              color: '#2A4B5A',
+            }}
+          >
+            Articles, stories, and brand narratives
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {writingSamples.map((sample, i) => (
+            <div
+              key={sample.id}
+              ref={(el) => { cardsRef.current[i] = el }}
+              className="group"
+              style={{ marginTop: i % 2 === 1 ? 80 : 0 }}
+            >
+              <Link to={`/portfolio/${sample.id}`} className="block">
+                <div
+                  className="relative overflow-hidden mb-6"
+                  style={{ borderRadius: 4, aspectRatio: '3/2' }}
+                >
+                  <img
+                    src={sample.image}
+                    alt={sample.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                  <div className="absolute inset-0 bg-[#0A0E1A]/0 group-hover:bg-[#0A0E1A]/40 transition-all duration-400 flex items-center justify-center">
+                    <span
+                      className="opacity-0 group-hover:opacity-100 transition-opacity duration-400 label-uppercase"
+                      style={{ color: '#F5F2EC' }}
+                    >
+                      Read More
+                    </span>
+                  </div>
+                </div>
+
+                <p
+                  className="label-uppercase mb-2"
+                  style={{ color: '#C8963E' }}
+                >
+                  {sample.category}
+                </p>
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: 24,
+                    fontWeight: 400,
+                    color: '#0A0E1A',
+                    lineHeight: 1.3,
+                    marginBottom: 8,
+                  }}
+                >
+                  {sample.title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: 15,
+                    color: '#2A4B5A',
+                    lineHeight: 1.6,
+                  }}
+                >
+                  {sample.description}
+                </p>
+              </Link>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16">
+          <Link
+            to="/portfolio"
+            className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-[#C8963E] group"
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 14,
+              color: '#2A4B5A',
+            }}
+          >
+            View All Work
+            <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
+}
+      import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+export default function About() {
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const imageRef = useRef<HTMLDivElement>(null)
+  const textRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (imageRef.current) {
+        gsap.fromTo(
+          imageRef.current,
+          { x: -60, opacity: 0 },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 75%',
+            },
+          }
+        )
+      }
+
+      if (textRef.current) {
+        const elements = textRef.current.querySelectorAll('.animate-in')
+        gsap.fromTo(
+          elements,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.1,
+            duration: 0.8,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 75%',
+            },
+          }
+        )
+      }
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section
+      ref={sectionRef}
+      id="about"
+      className="relative w-full py-32 lg:py-40"
+      style={{ backgroundColor: '#0A0E1A', zIndex: 2 }}
+    >
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+        <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
+          <div
+            ref={imageRef}
+            className="w-full md:w-[45%] flex justify-center md:justify-start"
+            style={{ marginTop: -40 }}
+          >
+            <div
+              className="relative overflow-hidden"
+              style={{
+                width: 'min(400px, 80vw)',
+                height: 'min(400px, 80vw)',
+                borderRadius: '50%',
+                border: '2px solid rgba(200,150,62,0.3)',
+              }}
+            >
+              <img
+                src="https://res.cloudinary.com/djkyc8wfa/image/upload/v1780323691/file_00000000d8f071f48a2196833ad47ea1_s4l80w.png"
+                alt="Princess Izevbizua"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          <div ref={textRef} className="w-full md:w-[50%]">
+            <p className="animate-in label-uppercase mb-6" style={{ color: '#C8963E' }}>
+              About
+            </p>
+            <h2
+              className="animate-in mb-8"
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
+                fontWeight: 300,
+                color: '#F5F2EC',
+                lineHeight: 1.3,
+              }}
+            >
+              I write to connect people with ideas that matter.
+            </h2>
+            <p
+              className="animate-in mb-6"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 16,
+                fontWeight: 300,
+                color: 'rgba(245,242,236,0.8)',
+                lineHeight: 1.7,
+              }}
+            >
+              Hello, I&apos;m Princess Izevbizua, a content writer, storyteller, and creative 
+              entrepreneur passionate about helping people and brands communicate meaningful ideas. 
+              My work focuses on emotional storytelling, personal development, lifestyle content, 
+              brand narratives, and audience engagement.
+            </p>
+            <p
+              className="animate-in mb-8"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 16,
+                fontWeight: 300,
+                color: 'rgba(245,242,236,0.8)',
+                lineHeight: 1.7,
+              }}
+            >
+              I believe powerful writing goes beyond words &mdash; it creates connection, trust, 
+              and impact. As an Economics and Statistics student, I bring analytical thinking 
+              alongside creativity, allowing me to create content that is both engaging and purposeful.
+            </p>
+            <div className="animate-in">
+              <a
+                href="https://www.linkedin.com/in/princess-izevbizua-6671b1360"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="pill-button"
+                style={{ color: '#C8963E', borderColor: '#C8963E' }}
+              >
+                Connect on LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+      import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const skills = [
+  'Content Writing',
+  'Research Writing',
+  'Article Writing',
+  'Blog Writing',
+  'Storytelling',
+  'Brand Storytelling',
+  'SEO Writing',
+  'Newsletter Writing',
+  'Social Media Content',
+  'Canva Design',
+  'Content Strategy',
+  'Creative Writing',
+]
+
+export default function Skills() {
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const pillsRef = useRef<(HTMLSpanElement | null)[]>([])
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      pillsRef.current.forEach((pill, i) => {
+        if (!pill) return
+        const randomX = (Math.random() - 0.5) * 40
+        const randomY = (Math.random() - 0.5) * 40
+        gsap.fromTo(
+          pill,
+          { x: randomX, y: randomY, opacity: 0 },
+          {
+            x: 0,
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            ease: 'power2.out',
+            delay: i * 0.06,
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 80%',
+            },
+          }
+        )
+      })
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section
+      ref={sectionRef}
+      id="skills"
+      className="relative w-full py-32 lg:py-40"
+      style={{ backgroundColor: '#F5F2EC', zIndex: 2 }}
+    >
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12 text-center">
+        <p className="label-uppercase mb-4" style={{ color: '#C8963E' }}>
+          Skills
+        </p>
+        <h2
+          className="mb-16"
+          style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
+            fontWeight: 300,
+            color: '#0A0E1A',
+          }}
+        >
+          What I Bring to Every Project
+        </h2>
+
+        <div className="flex flex-wrap justify-center gap-3">
+          {skills.map((skill, i) => (
+            <span
+              key={skill}
+              ref={(el) => { pillsRef.current[i] = el }}
+              className="inline-block px-7 py-3 border transition-all duration-300 cursor-default"
+              style={{
+                borderColor: '#0A0E1A',
+                borderRadius: 4,
+                fontFamily: 'var(--font-body)',
+                fontSize: 13,
+                color: '#0A0E1A',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#0A0E1A'
+                e.currentTarget.style.color = '#F5F2EC'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent'
+                e.currentTarget.style.color = '#0A0E1A'
+              }}
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+    import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { PenTool, Heart, Mail } from 'lucide-react'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const services = [
+  {
+    icon: PenTool,
+    title: 'Blog & Article Writing',
+    description:
+      'SEO-optimized long-form content that informs, engages, and converts readers into followers.',
+  },
+  {
+    icon: Heart,
+    title: 'Brand Storytelling',
+    description:
+      'Narratives that define your brand voice, connect emotionally with audiences, and build lasting loyalty.',
+  },
+  {
+    icon: Mail,
+    title: 'Newsletter & Social Content',
+    description:
+      'Short-form writing that keeps your community engaged and coming back for more.',
+  },
+]
+
+export default function Services() {
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      cardsRef.current.forEach((card, i) => {
+        if (!card) return
+        gsap.fromTo(
+          card,
+          { scale: 0.95, opacity: 0 },
+          {
+            scale: 1,
+            opacity: 1,
+            duration: 0.8,
+            ease: 'power3.out',
+            delay: i * 0.15,
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 80%',
+            },
+          }
+        )
+      })
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section
+      ref={sectionRef}
+      id="services"
+      className="relative w-full py-32 lg:py-40"
+      style={{ backgroundColor: '#F5F2EC', zIndex: 2 }}
+    >
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+        <div className="text-center mb-16">
+          <p className="label-uppercase mb-4" style={{ color: '#C8963E' }}>
+            Services
+          </p>
+          <h2
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(1.75rem, 3vw, 2.5rem)',
+              fontWeight: 300,
+              color: '#0A0E1A',
+            }}
+          >
+            How I Can Help
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map((service, i) => {
+            const Icon = service.icon
+            return (
+              <div
+                key={service.title}
+                ref={(el) => { cardsRef.current[i] = el }}
+                className="p-12 transition-shadow duration-300 hover:shadow-lg"
+                style={{
+                  backgroundColor: '#FFFFFF',
+                  borderRadius: 8,
+                  boxShadow: '0 4px 24px rgba(10,14,26,0.06)',
+                }}
+              >
+                <div
+                  className="mb-6 flex items-center justify-center"
+                  style={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: '50%',
+                    backgroundColor: 'rgba(200,150,62,0.1)',
+                  }}
+                >
+                  <Icon size={22} style={{ color: '#C8963E' }} />
+                </div>
+                <h3
+                  className="mb-4"
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: 22,
+                    fontWeight: 400,
+                    color: '#0A0E1A',
+                  }}
+                >
+                  {service.title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: 15,
+                    fontWeight: 300,
+                    color: '#2A4B5A',
+                    lineHeight: 1.65,
+                  }}
+                >
+                  {service.description}
+                </p>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+  )
+}
+                import { useEffect, useRef } from 'react'
+import { Link } from 'react-router'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ArrowRight } from 'lucide-react'
+
+gsap.registerPlugin(ScrollTrigger)
+
+export default function GlassInkHaven() {
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const imageRef = useRef<HTMLDivElement>(null)
+  const textRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (imageRef.current) {
+        gsap.fromTo(
+          imageRef.current,
+          { y: 80 },
+          {
+            y: -80,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top bottom',
+              end: 'bottom top',
+              scrub: true,
+            },
+          }
+        )
+      }
+
+      if (textRef.current) {
+        const elements = textRef.current.querySelectorAll('.animate-in')
+        gsap.fromTo(
+          elements,
+          { y: 50, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.12,
+            duration: 0.9,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 80%',
+            },
+          }
+        )
+      }
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section
+      ref={sectionRef}
+      id="glass-ink-haven"
+      className="relative w-full py-32 lg:py-40"
+      style={{ backgroundColor: '#0A0E1A', zIndex: 2 }}
+    >
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="w-full lg:w-[55%] overflow-hidden" style={{ borderRadius: 8 }}>
+            <div ref={imageRef}>
+              <img
+                src="/gih-hero.jpg"
+                alt="Glass Ink Haven - Healing-focused clothing brand"
+                className="w-full object-cover"
+                style={{ aspectRatio: '3/4' }}
+              />
+            </div>
+          </div>
+
+          <div ref={textRef} className="w-full lg:w-[45%]">
+            <p className="animate-in label-uppercase mb-4" style={{ color: '#C8963E' }}>
+              Founder
+            </p>
+            <h2
+              className="animate-in mb-6"
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: 'clamp(2rem, 4vw, 3rem)',
+                fontWeight: 300,
+                color: '#F5F2EC',
+              }}
+            >
+              Glass Ink Haven
+            </h2>
+            <p
+              className="animate-in mb-6"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 16,
+                fontWeight: 300,
+                color: 'rgba(245,242,236,0.8)',
+                lineHeight: 1.7,
+              }}
+            >
+              Glass Ink Haven is a healing-focused clothing and lifestyle brand created to help 
+              women wear their stories with confidence. Through meaningful apparel, storytelling, 
+              and empowering messages, the brand creates a safe space for emotional expression, 
+              healing, growth, and self-discovery.
+            </p>
+            <p
+              className="animate-in mb-8"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 16,
+                fontWeight: 300,
+                color: 'rgba(245,242,236,0.8)',
+                lineHeight: 1.7,
+              }}
+            >
+              The mission is simple: helping women feel seen, understood, and empowered through 
+              both fashion and storytelling.
+            </p>
+            <div className="animate-in">
+              <Link
+                to="/glass-ink-haven"
+                className="pill-button inline-flex items-center gap-2 group"
+                style={{ color: '#C8963E', borderColor: '#C8963E' }}
+              >
+                Explore Glass Ink Haven
+                <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Mail, Linkedin } from 'lucide-react'
+
+gsap.registerPlugin(ScrollTrigger)
+
+export default function Contact() {
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const contentRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (contentRef.current) {
+        const elements = contentRef.current.querySelectorAll('.animate-in')
+        gsap.fromTo(
+          elements,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            stagger: 0.12,
+            duration: 0.8,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: 'top 75%',
+            },
+          }
+        )
+      }
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section
+      ref={sectionRef}
+      id="contact"
+      className="relative w-full py-32 lg:py-40"
+      style={{ backgroundColor: '#F5F2EC', zIndex: 2 }}
+    >
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
+        <div ref={contentRef} className="max-w-[600px]">
+          <p className="animate-in label-uppercase mb-4" style={{ color: '#C8963E' }}>
+            Contact
+          </p>
+          <h2
+            className="animate-in mb-6"
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              fontWeight: 300,
+              color: '#0A0E1A',
+            }}
+          >
+            Let&apos;s Work Together
+          </h2>
+          <p
+            className="animate-in mb-10"
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 16,
+              color: '#2A4B5A',
+              lineHeight: 1.65,
+            }}
+          >
+            Interested in collaborating, hiring me, or discussing a project? I&apos;d love to hear from you.
+          </p>
+
+          <div className="animate-in space-y-5">
+            <a
+              href="mailto:princessizevbizua@gmail.com"
+              className="flex items-center gap-3 transition-colors duration-300 hover:text-[#C8963E]"
+              style={{ color: '#0A0E1A' }}
+            >
+              <Mail size={20} />
+              <span style={{ fontFamily: 'var(--font-body)', fontSize: 16 }}>
+                princessizevbizua@gmail.com
+              </span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/princess-izevbizua-6671b1360"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 transition-colors duration-300 hover:text-[#C8963E]"
+              style={{ color: '#0A0E1A' }}
+            >
+              <Linkedin size={20} />
+              <span style={{ fontFamily: 'var(--font-body)', fontSize: 16 }}>
+                linkedin.com/in/princess-izevbizua
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+    import { Linkedin, Mail } from 'lucide-react'
+
+export default function Footer() {
+  return (
+    <footer
+      className="relative w-full py-12"
+      style={{ backgroundColor: '#0A0E1A', zIndex: 2 }}
+    >
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col items-center gap-6">
+        <div className="flex items-center gap-6">
+          <a
+            href="https://www.linkedin.com/in/princess-izevbizua-6671b1360"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors duration-300"
+            style={{ color: 'rgba(245,242,236,0.5)' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = '#C8963E' }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(245,242,236,0.5)' }}
+          >
+            <Linkedin size={20} />
+          </a>
+          <a
+            href="mailto:princessizevbizua@gmail.com"
+            className="transition-colors duration-300"
+            style={{ color: 'rgba(245,242,236,0.5)' }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = '#C8963E' }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = 'rgba(245,242,236,0.5)' }}
+          >
+            <Mail size={20} />
+          </a>
+        </div>
+        <p
+          style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: 12,
+            color: 'rgba(245,242,236,0.4)',
+          }}
+        >
+          &copy; 2025 Princess Izevbizua. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  )
+}
+    import Ocean from '@/components/Ocean'
+import Hero from '@/sections/Hero'
+import FeaturedWork from '@/sections/FeaturedWork'
+import About from '@/sections/About'
+import Skills from '@/sections/Skills'
+import Services from '@/sections/Services'
+import GlassInkHaven from '@/sections/GlassInkHaven'
+import Contact from '@/sections/Contact'
+import Footer from '@/sections/Footer'
+
+export default function Home() {
+  return (
+    <>
+      <Ocean />
+      <div className="relative" style={{ zIndex: 1 }}>
+        <Hero />
+        <div className="relative" style={{ zIndex: 2 }}>
+          <FeaturedWork />
+          <About />
+          <Skills />
+          <Services />
+          <GlassInkHaven />
+          <Contact />
+          <Footer />
+        </div>
+      </div>
+    </>
+  )
+}
+            import { useEffect, useRef } from 'react'
+import { Link } from 'react-router'
+import gsap from 'gsap'
+import { writingSamples } from '@/data/portfolio'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
+
+export default function Portfolio() {
+  const sectionRef = useRef<HTMLDivElement>(null)
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+
+    const ctx = gsap.context(() => {
+      cardsRef.current.forEach((card, i) => {
+        if (!card) return
+        gsap.fromTo(
+          card,
+          { y: 40, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            ease: 'power3.out',
+            delay: i * 0.1,
+          }
+        )
+      })
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <div ref={sectionRef} className="min-h-screen" style={{ backgroundColor: '#F5F2EC' }}>
+      <div className="w-full py-8 px-6 lg:px-12" style={{ backgroundColor: '#0A0E1A' }}>
+        <div className="max-w-[1200px] mx-auto flex items-center justify-between">
+          <Link
+            to="/"
+            className="flex items-center gap-2 transition-colors duration-300 hover:text-[#C8963E]"
+            style={{ color: '#F5F2EC', fontFamily: 'var(--font-body)', fontSize: 14 }}
+          >
+            <ArrowLeft size={16} />
+            Back to Home
+          </Link>
+          <span
+            className="font-[var(--font-heading)] text-lg"
+            style={{ color: '#F5F2EC' }}
+          >
+            Princess Izevbizua
+          </span>
+        </div>
+      </div>
+
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12 py-20">
+        <p className="label-uppercase mb-4" style={{ color: '#C8963E' }}>
+          Portfolio
+        </p>
+        <h1
+          className="mb-4"
+          style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: 'clamp(2rem, 4vw, 3.5rem)',
+            fontWeight: 300,
+            color: '#0A0E1A',
+          }}
+        >
+          Featured Writing Samples
+        </h1>
+        <p
+          className="mb-16"
+          style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: 16,
+            color: '#2A4B5A',
+            lineHeight: 1.65,
+          }}
+        >
+          A collection of articles, stories, and brand narratives that showcase my range as a writer.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {writingSamples.map((sample, i) => (
+            <div
+              key={sample.id}
+              ref={(el) => { cardsRef.current[i] = el }}
+            >
+              <Link to={`/portfolio/${sample.id}`} className="group block">
+                <div
+                  className="relative overflow-hidden mb-6"
+                  style={{ borderRadius: 4, aspectRatio: '3/2' }}
+                >
+                  <img
+                    src={sample.image}
+                    alt={sample.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                  <div className="absolute inset-0 bg-[#0A0E1A]/0 group-hover:bg-[#0A0E1A]/40 transition-all duration-400 flex items-center justify-center">
+                    <span
+                      className="opacity-0 group-hover:opacity-100 transition-opacity duration-400 label-uppercase flex items-center gap-2"
+                      style={{ color: '#F5F2EC' }}
+                    >
+                      Read More <ArrowRight size={14} />
+                    </span>
+                  </div>
+                </div>
+                <p className="label-uppercase mb-2" style={{ color: '#C8963E' }}>
+                  {sample.category}
+                </p>
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: 22,
+                    fontWeight: 400,
+                    color: '#0A0E1A',
+                    lineHeight: 1.3,
+                    marginBottom: 8,
+                  }}
+                >
+                  {sample.title}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: 15,
+                    color: '#2A4B5A',
+                    lineHeight: 1.6,
+                  }}
+                >
+                  {sample.description}
+                </p>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+      import { useEffect, useRef } from 'react'
+import { useParams, Link, useNavigate } from 'react-router'
+import gsap from 'gsap'
+import { writingSamples } from '@/data/portfolio'
+import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react'
+
+export default function PortfolioDetail() {
+  const { id } = useParams<{ id: string }>()
+  const navigate = useNavigate()
+  const contentRef = useRef<HTMLDivElement>(null)
+
+  const sample = writingSamples.find((s) => s.id === id)
+  const currentIndex = writingSamples.findIndex((s) => s.id === id)
+  const prevSample = currentIndex > 0 ? writingSamples[currentIndex - 1] : null
+  const nextSample = currentIndex < writingSamples.length - 1 ? writingSamples[currentIndex + 1] : null
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+
+    if (contentRef.current) {
+      gsap.fromTo(
+        contentRef.current.querySelectorAll('.animate-in'),
+        { y: 30, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.08,
+          duration: 0.7,
+          ease: 'power3.out',
+        }
+      )
+    }
+  }, [id])
+
+  if (!sample) {
+    return (
+      <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#F5F2EC' }}>
+        <div className="text-center">
+          <h2
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 32,
+              color: '#0A0E1A',
+              marginBottom: 16,
+            }}
+          >
+            Writing Sample Not Found
+          </h2>
+          <Link to="/portfolio" className="pill-button" style={{ color: '#0A0E1A', borderColor: '#0A0E1A' }}>
+            View All Work
+          </Link>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="min-h-screen" style={{ backgroundColor: '#F5F2EC' }}>
+      <div className="w-full py-8 px-6 lg:px-12" style={{ backgroundColor: '#0A0E1A' }}>
+        <div className="max-w-[900px] mx-auto flex items-center justify-between">
+          <button
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-2 transition-colors duration-300 hover:text-[#C8963E]"
+            style={{ color: '#F5F2EC', fontFamily: 'var(--font-body)', fontSize: 14, background: 'none', border: 'none', cursor: 'pointer' }}
+          >
+            <ArrowLeft size={16} />
+            Back
+          </button>
+          <Link
+            to="/"
+            className="font-[var(--font-heading)] text-lg"
+            style={{ color: '#F5F2EC' }}
+          >
+            Princess Izevbizua
+          </Link>
+        </div>
+      </div>
+
+      <div ref={contentRef} className="max-w-[900px] mx-auto px-6 lg:px-12 py-16">
+        <p className="animate-in label-uppercase mb-4" style={{ color: '#C8963E' }}>
+          {sample.category}
+        </p>
+
+        <h1
+          className="animate-in mb-8"
+          style={{
+            fontFamily: 'var(--font-heading)',
+            fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+            fontWeight: 300,
+            color: '#0A0E1A',
+            lineHeight: 1.2,
+          }}
+        >
+          {sample.title}
+        </h1>
+
+        <div
+          className="animate-in overflow-hidden mb-12"
+          style={{ borderRadius: 8, aspectRatio: '16/9' }}
+        >
+          <img
+            src={sample.image}
+            alt={sample.title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <div className="animate-in mb-12">
+          <h2
+            className="mb-4"
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 24,
+              fontWeight: 400,
+              color: '#0A0E1A',
+            }}
+          >
+            Overview
+          </h2>
+          <p
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 16,
+              color: '#2A4B5A',
+              lineHeight: 1.7,
+            }}
+          >
+            {sample.overview}
+          </p>
+        </div>
+
+        <div className="animate-in mb-12">
+          <h2
+            className="mb-4"
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 24,
+              fontWeight: 400,
+              color: '#0A0E1A',
+            }}
+          >
+            Key Themes
+          </h2>
+          <div className="flex flex-wrap gap-2">
+            {sample.keyThemes.map((theme) => (
+              <span
+                key={theme}
+                className="px-4 py-2"
+                style={{
+                  backgroundColor: 'rgba(200,150,62,0.1)',
+                  borderRadius: 4,
+                  fontFamily: 'var(--font-body)',
+                  fontSize: 14,
+                  color: '#0A0E1A',
+                }}
+              >
+                {theme}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="animate-in mb-12">
+          <h2
+            className="mb-4"
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 24,
+              fontWeight: 400,
+              color: '#0A0E1A',
+            }}
+          >
+            Writing Style
+          </h2>
+          <p
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 16,
+              color: '#2A4B5A',
+              lineHeight: 1.7,
+            }}
+          >
+            {sample.writingStyle}
+          </p>
+        </div>
+
+        {sample.originalLink && sample.originalLink !== '#' && (
+          <div className="animate-in mb-16">
+            <a
+              href={sample.originalLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-[#C8963E]"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 15,
+                color: '#0A0E1A',
+                textDecoration: 'underline',
+                textUnderlineOffset: 4,
+              }}
+            >
+              Read the full article on Medium
+              <ExternalLink size={14} />
+            </a>
+          </div>
+        )}
+
+        <div
+          className="animate-in flex flex-col sm:flex-row items-center justify-between gap-4 pt-12"
+          style={{ borderTop: '1px solid rgba(10,14,26,0.1)' }}
+        >
+          {prevSample ? (
+            <Link
+              to={`/portfolio/${prevSample.id}`}
+              className="flex items-center gap-2 transition-colors duration-300 hover:text-[#C8963E]"
+              style={{ color: '#0A0E1A', fontFamily: 'var(--font-body)', fontSize: 14 }}
+            >
+              <ArrowLeft size={16} />
+              <span>
+                <span className="label-uppercase block" style={{ fontSize: 10, color: '#2A4B5A' }}>Previous</span>
+                {prevSample.title}
+              </span>
+            </Link>
+          ) : (
+            <div />
+          )}
+          {nextSample ? (
+            <Link
+              to={`/portfolio/${nextSample.id}`}
+              className="flex items-center gap-2 text-right transition-colors duration-300 hover:text-[#C8963E]"
+              style={{ color: '#0A0E1A', fontFamily: 'var(--font-body)', fontSize: 14 }}
+            >
+              <span>
+                <span className="label-uppercase block" style={{ fontSize: 10, color: '#2A4B5A' }}>Next</span>
+                {nextSample.title}
+              </span>
+              <ArrowRight size={16} />
+            </Link>
+          ) : (
+            <div />
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+              import { useEffect, useRef } from 'react'
+import { Link } from 'react-router'
+import gsap from 'gsap'
+import { glassInkHavenData } from '@/data/glassInkHaven'
+import { ArrowLeft, ArrowUpRight, Heart, Sparkles, Users, Target, Eye, Compass } from 'lucide-react'
+
+export default function GlassInkHavenPage() {
+  const pageRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+
+    if (pageRef.current) {
+      const elements = pageRef.current.querySelectorAll('.animate-in')
+      gsap.fromTo(
+        elements,
+        { y: 30, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.05,
+          duration: 0.6,
+          ease: 'power3.out',
+        }
+      )
+    }
+  }, [])
+
+  const valueIcons = [Heart, Sparkles, Users, Target, Compass]
+
+  return (
+    <div ref={pageRef} className="min-h-screen" style={{ backgroundColor: '#F5F2EC' }}>
+      <div className="w-full py-8 px-6 lg:px-12" style={{ backgroundColor: '#0A0E1A' }}>
+        <div className="max-w-[1200px] mx-auto flex items-center justify-between">
+          <Link
+            to="/"
+            className="flex items-center gap-2 transition-colors duration-300 hover:text-[#C8963E]"
+            style={{ color: '#F5F2EC', fontFamily: 'var(--font-body)', fontSize: 14 }}
+          >
+            <ArrowLeft size={16} />
+            Back to Home
+          </Link>
+          <span
+            className="font-[var(--font-heading)] text-lg"
+            style={{ color: '#F5F2EC' }}
+          >
+            Princess Izevbizua
+          </span>
+        </div>
+      </div>
+
+      <div className="w-full py-24 lg:py-32 px-6 lg:px-12" style={{ backgroundColor: '#0A0E1A' }}>
+        <div className="max-w-[1200px] mx-auto">
+          <p className="animate-in label-uppercase mb-4" style={{ color: '#C8963E' }}>
+            Founder of Glass Ink Haven
+          </p>
+          <h1
+            className="animate-in mb-6 max-w-[700px]"
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+              fontWeight: 300,
+              color: '#F5F2EC',
+              lineHeight: 1.15,
+            }}
+          >
+            Wear Your Story. Heal Your Heart.
+          </h1>
+          <p
+            className="animate-in max-w-[600px]"
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: 17,
+              fontWeight: 300,
+              color: 'rgba(245,242,236,0.8)',
+              lineHeight: 1.7,
+            }}
+          >
+            A healing-focused clothing and lifestyle brand created to help women wear their 
+            stories with confidence.
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-12 py-20 lg:py-28">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 mb-28">
+          <div className="w-full lg:w-1/2">
+            <div className="animate-in overflow-hidden" style={{ borderRadius: 8 }}>
+              <img
+                src="/gih-hero.jpg"
+                alt="Glass Ink Haven"
+                className="w-full object-cover"
+                style={{ aspectRatio: '3/4' }}
+              />
+            </div>
+          </div>
+          <div className="w-full lg:w-1/2 flex flex-col justify-center">
+            <h2
+              className="animate-in mb-6"
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
+                fontWeight: 300,
+                color: '#0A0E1A',
+              }}
+            >
+              The Brand Story
+            </h2>
+            <p
+              className="animate-in mb-6"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 16,
+                color: '#2A4B5A',
+                lineHeight: 1.7,
+              }}
+            >
+              {glassInkHavenData.brandStory}
+            </p>
+            <p
+              className="animate-in"
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 16,
+                color: '#2A4B5A',
+                lineHeight: 1.7,
+              }}
+            >
+              {glassInkHavenData.overview}
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-28">
+          <div
+            className="animate-in p-10"
+            style={{
+              backgroundColor: '#0A0E1A',
+              borderRadius: 8,
+            }}
+          >
+            <Eye size={28} style={{ color: '#C8963E', marginBottom: 16 }} />
+            <h3
+              className="mb-4"
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: 22,
+                fontWeight: 400,
+                color: '#F5F2EC',
+              }}
+            >
+              Mission
+            </h3>
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 15,
+                fontWeight: 300,
+                color: 'rgba(245,242,236,0.8)',
+                lineHeight: 1.7,
+              }}
+            >
+              {glassInkHavenData.mission}
+            </p>
+          </div>
+          <div
+            className="animate-in p-10"
+            style={{
+              backgroundColor: '#FFFFFF',
+              borderRadius: 8,
+              boxShadow: '0 4px 24px rgba(10,14,26,0.06)',
+            }}
+          >
+            <Sparkles size={28} style={{ color: '#C8963E', marginBottom: 16 }} />
+            <h3
+              className="mb-4"
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: 22,
+                fontWeight: 400,
+                color: '#0A0E1A',
+              }}
+            >
+              Vision
+            </h3>
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: 15,
+                color: '#2A4B5A',
+                lineHeight: 1.7,
+              }}
+            >
+              {glassInkHavenData.vision}
+            </p>
+          </div>
+        </div>
+
+        <div className="mb-28">
+          <h2
+            className="animate-in mb-12 text-center"
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
+              fontWeight: 300,
+              color: '#0A0E1A',
+            }}
+          >
+            What Glass Ink Haven Offers
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {glassInkHavenData.products.map((product, i) => {
+              const icons = [Heart, Sparkles, Users]
+              const Icon = icons[i]
+              return (
+                <div
+                  key={product.title}
+                  className="animate-in p-10 text-center"
+                  style={{
+                    backgroundColor: '#FFFFFF',
+                    borderRadius: 8,
+                    boxShadow: '0 4px 24px rgba(10,14,26,0.06)',
+                  }}
+                >
+                  <div
+                    className="mx-auto mb-6 flex items-center justify-center"
+                    style={{
+                      width: 56,
+                      height: 56,
+                      borderRadius: '50%',
+                      backgroundColor: 'rgba(200,150,62,0.1)',
+                    }}
+                  >
+                    <Icon size={24} style={{ color: '#C8963E' }} />
+                  </div>
+                  <h3
+                    className="mb-4"
+                    style={{
+                      fontFamily: 'var(--font-heading)',
+                      fontSize: 20,
+                      fontWeight: 400,
+                      color: '#0A0E1A',
+                    }}
+                  >
+                    {product.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: 'var(--font-body)',
+                      fontSize: 15,
+                      color: '#2A4B5A',
+                      lineHeight: 1.65,
+                    }}
+                  >
+                    {product.description}
+                  </p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="mb-28">
+          <h2
+            className="animate-in mb-12 text-center"
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
+              fontWeight: 300,
+              color: '#0A0E1A',
+            }}
+          >
+            Our Values
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {glassInkHavenData.values.map((value, i) => {
+              const Icon = valueIcons[i] || Heart
+              return (
+                <div
+                  key={value.title}
+                  className="animate-in p-8"
+                  style={{
+                    backgroundColor: '#FFFFFF',
+                    borderRadius: 8,
+                    boxShadow: '0 4px 24px rgba(10,14,26,0.06)',
+                  }}
+                >
+                  <Icon size={22} style={{ color: '#C8963E', marginBottom: 12 }} />
+                  <h3
+                    className="mb-2"
+                    style={{
+                      fontFamily: 'var(--font-heading)',
+                      fontSize: 18,
+                      fontWeight: 400,
+                      color: '#0A0E1A',
+                    }}
+                  >
+                    {value.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontFamily: 'var(--font-body)',
+                      fontSize: 14,
+                      color: '#2A4B5A',
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    {value.description}
+                  </p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        <div
+          className="animate-in p-10 lg:p-16 mb-20"
+          style={{
+            backgroundColor: '#0A0E1A',
+            borderRadius: 8,
+          }}
+        >
+          <h2
+            className="mb-8 text-center"
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
+              fontWeight: 300,
+              color: '#F5F2EC',
+            }}
+          >
+            Future Goals
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-[800px] mx-auto">
+            {glassInkHavenData.futureGoals.map((goal, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span
+                  className="flex-shrink-0 mt-1"
+                  style={{
+                    width: 6,
+                    height: 6,
+                    borderRadius: '50%',
+                    backgroundColor: '#C8963E',
+                  }}
+                />
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: 15,
+                    fontWeight: 300,
+                    color: 'rgba(245,242,236,0.8)',
+                    lineHeight: 1.6,
+                  }}
+                >
+                  {goal}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="animate-in text-center mb-16">
+          <a
+            href="https://glassinkhaven.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="pill-button-filled inline-flex items-center gap-2"
+          >
+            View Our GIH Website
+            <ArrowUpRight size={14} />
+          </a>
+        </div>
+
+        <div className="text-center pb-12">
+          <blockquote
+            className="animate-in mx-auto max-w-[700px]"
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)',
+              fontWeight: 300,
+              fontStyle: 'italic',
+              color: '#0A0E1A',
+              lineHeight: 1.5,
+            }}
+          >
+            &ldquo;They are allowed to feel deeply. They are allowed to heal slowly. They are 
+            allowed to express themselves through what they wear. It is more than clothing &mdash; 
+            it is emotional expression made visible.&rdquo;
+          </blockquote>
+          <p className="animate-in mt-6 label-uppercase" style={{ color: '#C8963E' }}>
+            &mdash; Glass Ink Haven
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+          import { Link } from 'react-router'
+
+export default function NotFound() {
+  return (
+    <div
+      className="min-h-screen flex flex-col items-center justify-center px-6"
+      style={{ backgroundColor: '#0A0E1A' }}
+    >
+      <h1
+        style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: 'clamp(4rem, 10vw, 8rem)',
+          fontWeight: 300,
+          color: '#C8963E',
+          lineHeight: 1,
+        }}
+      >
+        404
+      </h1>
+      <p
+        className="mb-8 text-center"
+        style={{
+          fontFamily: 'var(--font-body)',
+          fontSize: 16,
+          color: 'rgba(245,242,236,0.7)',
+        }}
+      >
+        This page doesn&apos;t exist. Let&apos;s get you back on track.
+      </p>
+      <Link
+        to="/"
+        className="pill-button-filled"
+      >
+        Go Home
+      </Link>
+    </div>
+  )
+}
+    
+              
+        
+              
