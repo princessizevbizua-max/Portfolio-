@@ -10,8 +10,7 @@ const GlassInkHavenPage = lazy(() => import('@/pages/GlassInkHavenPage'))
 const NotFound = lazy(() => import('@/pages/NotFound'))
 
 function ScrollToTop() {
-  const { pathname } = useLocation()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useLocation()
   ;(window as any).scrollTo(0, 0)
   return null
 }
