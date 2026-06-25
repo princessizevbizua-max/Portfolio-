@@ -87,7 +87,7 @@ export default function GlassInkHavenPage() {
           <div className="w-full lg:w-1/2">
             <div className="animate-in overflow-hidden" style={{ borderRadius: 8 }}>
               <img
-                src="/gih-hero.jpg"
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=60"
                 alt="Glass Ink Haven"
                 className="w-full object-cover"
                 style={{ aspectRatio: '3/4' }}
