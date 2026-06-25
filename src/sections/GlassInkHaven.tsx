@@ -65,7 +65,7 @@ export default function GlassInkHaven() {
           <div className="w-full lg:w-[55%] overflow-hidden" style={{ borderRadius: 8 }}>
             <div ref={imageRef}>
               <img
-                src="/gih-hero.jpg"
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&auto=format&fit=crop&q=60"
                 alt="Glass Ink Haven - Healing-focused clothing brand"
                 className="w-full object-cover"
                 style={{ aspectRatio: '3/4' }}
@@ -98,9 +98,9 @@ export default function GlassInkHaven() {
                 lineHeight: 1.7,
               }}
             >
-              Glass Ink Haven is a healing-focused clothing and lifestyle brand created to help 
-              women wear their stories with confidence. Through meaningful apparel, storytelling, 
-              and empowering messages, the brand creates a safe space for emotional expression, 
+              Glass Ink Haven is a healing-focused clothing and lifestyle brand created to help
+              women wear their stories with confidence. Through meaningful apparel, storytelling,
+              and empowering messages, the brand creates a safe space for emotional expression,
               healing, growth, and self-discovery.
             </p>
             <p
@@ -113,7 +113,7 @@ export default function GlassInkHaven() {
                 lineHeight: 1.7,
               }}
             >
-              The mission is simple: helping women feel seen, understood, and empowered through 
+              The mission is simple: helping women feel seen, understood, and empowered through
               both fashion and storytelling.
             </p>
             <div className="animate-in">
@@ -131,4 +131,4 @@ export default function GlassInkHaven() {
       </div>
     </section>
   )
-}
+}w
